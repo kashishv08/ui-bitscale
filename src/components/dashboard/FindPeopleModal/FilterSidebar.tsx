@@ -148,7 +148,7 @@ const FilterSidebar = ({
       style={{
         padding: "30px 20px",
         display: "flex",
-        gap: 12,
+        gap: 14,
         flexShrink: 0,
       }}
     >
@@ -159,11 +159,9 @@ const FilterSidebar = ({
           alignItems: "center",
           justifyContent: "center",
           gap: 6,
-          paddingRight: 5,
-          paddingLeft: 5,
-          padding: "10px 0",
+          padding: "9px 9px",
           fontSize: 10,
-          fontWeight: 600,
+          fontWeight: 500,
           color: "#1e293b",
           background: "#e2e8f0",
           border: "none",
@@ -171,7 +169,7 @@ const FilterSidebar = ({
           cursor: "pointer",
         }}
       >
-        <FileSearchCorner size={16} />
+        <FileSearchCorner size={12} />
         Save Search
       </button>
       <button
@@ -181,10 +179,9 @@ const FilterSidebar = ({
           alignItems: "center",
           justifyContent: "center",
           gap: 8,
-          paddingRight: 10,
-          paddingLeft: 10,
+          padding: "5px 9px",
           fontSize: 10,
-          fontWeight: 600,
+          fontWeight: 400,
           color: "#fff",
           background: "#1e293b",
           border: "none",
@@ -192,7 +189,7 @@ const FilterSidebar = ({
           cursor: "pointer",
         }}
       >
-        <Eye size={16} strokeWidth={2.5} />
+        <Eye size={12} strokeWidth={2.5} />
         Preview Result
       </button>
     </div>
