@@ -1,10 +1,6 @@
 import { Search, Lock, X, Menu } from "lucide-react";
 import { TABLE_COLUMNS } from "./constants";
-
-interface ResultsPanelProps {
-  onClose: () => void;
-  onMobileFiltersOpen: () => void;
-}
+import type { ResultsPanelProps } from "../../../types";
 
 const EmptyIllustration = () => (
   <div className="w-24 h-24 rounded-full bg-[#EEF4FF] flex items-center justify-center mb-2">

@@ -1,12 +1,5 @@
 import React from 'react';
-
-interface NavItemProps {
-  icon: React.ReactNode;
-  label: string;
-  active?: boolean;
-  suffix?: React.ReactNode;
-  onClick?: () => void;
-}
+import type { NavItemProps } from '../../../types';
 
 const NavItem: React.FC<NavItemProps> = ({ icon, label, active = false, suffix, onClick }) => (
   <button

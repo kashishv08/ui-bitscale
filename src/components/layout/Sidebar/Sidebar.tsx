@@ -9,11 +9,7 @@ import {
   ChevronRightIcon,
 } from '../../../icons';
 import { Rocket, ChevronsUpDown, ChevronUp } from 'lucide-react';
-
-interface SidebarProps {
-  isOpen?: boolean;
-  onClose?: () => void;
-}
+import type { SidebarProps } from '../../../types';
 
 const OverlappingAvatars = () => (
   <div className="flex items-center -space-x-3.5">

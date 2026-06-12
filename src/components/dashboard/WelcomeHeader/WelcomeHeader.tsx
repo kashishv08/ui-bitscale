@@ -1,17 +1,6 @@
-
 import React from 'react';
 import { BuildingIcon, PeopleIcon, PlusIcon } from '../../../icons';
-
-interface WelcomeHeaderProps {
-
-  userName?: string;
-
-  onFindPeopleClick?: () => void;
-
-  onFindCompaniesClick?: () => void;
-
-  onNewGridClick?: () => void;
-}
+import type { WelcomeHeaderProps } from '../../../types';
 
 const WelcomeHeader: React.FC<WelcomeHeaderProps> = ({
   userName = 'Tim',

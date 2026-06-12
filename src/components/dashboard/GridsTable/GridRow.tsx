@@ -1,16 +1,6 @@
-import React from 'react';
 import { TABLE_COLS } from './GridsTable';
 import { AVATAR_FALLBACK_COLOR } from '../../../constants/avatarColors';
-import type { GridRowData } from '../../../types';
-
-interface GridRowProps {
-  row: GridRowData;
-  isStarred: boolean;
-  isExpanded: boolean;
-  onToggleStar: () => void;
-  onToggleExpand: () => void;
-}
-
+import type { GridRowData, GridRowProps } from '../../../types';
 import { Star, ChevronDown, MoreHorizontal, Users, Share2, Building2 } from 'lucide-react';
 
 const StarIcon = ({ filled }: { filled: boolean }) => (

@@ -1,15 +1,5 @@
-
 import React from 'react';
-import type { AvatarSize } from '../../../types';
-
-interface AvatarProps {
-
-  initials: string;
-
-  color: string;
-
-  size?: AvatarSize;
-}
+import type { AvatarSize, AvatarProps } from '../../../types';
 
 const SIZE_CLASSES: Record<AvatarSize, string> = {
   sm: 'w-5 h-5 text-[9px]',

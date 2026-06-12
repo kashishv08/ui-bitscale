@@ -1,10 +1,7 @@
 import { useState } from "react";
 import FilterSidebar from "./FilterSidebar";
 import ResultsPanel from "./ResultsPanel";
-
-interface FindPeopleModalProps {
-  onClose: () => void;
-}
+import type { FindPeopleModalProps } from "../../../types";
 
 const FindPeopleModal = ({ onClose }: FindPeopleModalProps) => {
   const [keyword, setKeyword] = useState("");

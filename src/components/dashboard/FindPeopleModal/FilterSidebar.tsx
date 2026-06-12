@@ -1,14 +1,7 @@
 import { Search, ChevronDown, Bookmark, Eye, X, UserSearch } from "lucide-react";
 import FilterIcon from "./FilterIcon";
 import { FILTERS } from "./constants";
-
-interface FilterSidebarProps {
-  keyword: string;
-  onKeywordChange: (v: string) => void;
-  openFilters: Record<string, boolean>;
-  onToggleFilter: (label: string) => void;
-  onMobileClose: () => void;
-}
+import type { FilterSidebarProps } from "../../../types";
 
 const FilterSidebar = ({
   keyword,

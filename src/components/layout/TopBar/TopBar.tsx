@@ -2,10 +2,7 @@ import React from 'react';
 import Avatar from '../../ui/Avatar/Avatar';
 import { MenuIcon } from '../../../icons';
 import { Coins } from 'lucide-react';
-
-interface TopBarProps {
-  onMenuClick?: () => void;
-}
+import type { TopBarProps } from '../../../types';
 
 const TopBar: React.FC<TopBarProps> = ({ onMenuClick }) => (
   <header
@@ -13,7 +10,6 @@ const TopBar: React.FC<TopBarProps> = ({ onMenuClick }) => (
     style={{ backgroundColor: '#ffffff' }}
     aria-label="Top bar"
   >
-    {/* Mobile Menu */}
     <div className="flex items-center md:hidden">
       <button 
         onClick={onMenuClick} 
@@ -24,9 +20,7 @@ const TopBar: React.FC<TopBarProps> = ({ onMenuClick }) => (
       </button>
     </div>
 
-    {/* Right side: Pill and Avatar */}
     <div className="flex items-center gap-4">
-      {/* Booster Plan Pill */}
       <div className="flex items-center bg-[#eff5f1] rounded-xl pl-3 pr-1 py-1 border border-[#e5eee8]">
         <div className="flex items-center gap-2 text-[#458564] ml-1 mr-3">
           <Coins size={22} strokeWidth={1.5} />
@@ -37,7 +31,6 @@ const TopBar: React.FC<TopBarProps> = ({ onMenuClick }) => (
         </button>
       </div>
 
-      {/* Avatar */}
       <div className="w-[36px] h-[36px] rounded-full overflow-hidden cursor-pointer flex-shrink-0 relative">
         <img 
           src="https://picsum.photos/seed/avatar3/100/100" 
