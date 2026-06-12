@@ -1,10 +1,10 @@
-import { Search, Lock, X, Menu } from "lucide-react";
-import { TABLE_COLUMNS } from "./constants";
+import { Lock, Menu, Search, X } from "lucide-react";
 import type { ResultsPanelProps } from "../../../types";
+import { TABLE_COLUMNS } from "./constants";
 
 const EmptyIllustration = () => (
-  <div className="w-24 h-24 rounded-full bg-[#EEF4FF] flex items-center justify-center mb-2">
-    <Search size={48} color="#a5b4fc" strokeWidth={1.5} />
+  <div className="flex items-center justify-center mb-0 mt-4">
+    <img src="/resultSectionImage.png" alt="resultSectionImage" className="max-w-[120px] md:max-w-[160px] h-auto object-contain" />
   </div>
 );
 
@@ -51,10 +51,10 @@ const ResultsPanel = ({ onClose, onMobileFiltersOpen }: ResultsPanelProps) => (
     </div>
     {/* Main Content Box */}
     <div className="flex-1 overflow-hidden px-4 md:pl-0 md:pr-6 pb-4 md:pb-[96px] flex flex-col">
-      <div className="no-scrollbar flex-1 flex flex-col border border-[#e2e8f0] rounded-xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+      <div className="no-scrollbar flex-1 flex flex-col border border-[#e2e8f0] rounded-xl bg-white shadow-sm overflow-y-auto overflow-x-auto">
         <div className="min-w-[700px] flex-1 flex flex-col">
           {/* Table Header */}
-          <div className="flex bg-[#f8fafc] border-b border-[#e2e8f0] px-4 py-3.5 flex-shrink-0">
+          <div className="flex bg-[#f8fafc] border-b border-[#e2e8f0] px-4 py-3.5 flex-shrink-0 sticky top-0 z-10">
             {TABLE_COLUMNS.map((col) => (
               <div
                 key={col}
@@ -66,9 +66,10 @@ const ResultsPanel = ({ onClose, onMobileFiltersOpen }: ResultsPanelProps) => (
           </div>
 
           {/* Empty State */}
-          <div className="flex-1 flex flex-col items-center justify-center p-4 md:p-8 bg-white">
+          <div className="flex-1 min-h-[400px] flex flex-col items-center justify-center p-4 md:p-8 bg-white">
             <EmptyIllustration />
-            <p className="text-center text-[10px] md:text-[13px] text-[#94a3b8] leading-relaxed">
+            
+            <p className="text-center text-[10px] md:text-[10px] text-[#94a3b8] leading-relaxed">
               Start your Company search , preview, and import companies<br className="hidden md:block" />
               for enrichment by applying any filter in the left panel.<br />
               <span className="font-semibold text-[#64748b] my-1 inline-block">OR</span><br />
