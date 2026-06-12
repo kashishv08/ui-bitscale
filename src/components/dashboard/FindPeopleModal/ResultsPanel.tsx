@@ -66,7 +66,7 @@ const ResultsPanel = ({ onClose, onMobileFiltersOpen }: ResultsPanelProps) => (
           </div>
 
           {/* Empty State */}
-          <div className="flex-1 min-h-[400px] flex flex-col items-center justify-center p-4 md:p-8 bg-white">
+          <div className="flex-1 min-h-[80px] flex flex-col items-center justify-center p-4 md:p-8 bg-white">
             <EmptyIllustration />
             
             <p className="text-center text-[10px] md:text-[10px] text-[#94a3b8] leading-relaxed">
