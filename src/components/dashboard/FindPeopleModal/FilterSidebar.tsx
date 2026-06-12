@@ -154,6 +154,7 @@ const FilterSidebar = ({
     >
       <button
         style={{
+          height: "26px",
           flex: 1,
           display: "flex",
           alignItems: "center",
