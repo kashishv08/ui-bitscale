@@ -74,9 +74,9 @@ const LatestCard = () => {
       </div>
 
       <div className="flex flex-col md:flex-row gap-4 mb-1 md:mb-2">
-        <div className="h-full flex-shrink-0 w-full md:w-[160px] h-[160px] md:h-[110px] bg-white rounded-[8px] relative flex items-center justify-center overflow-hidden border border-black/5 shadow-sm">
+        <div className="flex-shrink-0 w-full md:w-[160px] h-[140px] md:h-[110px] bg-white rounded-[8px] relative flex items-center justify-center overflow-hidden border border-black/5 shadow-sm">
           <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200"></div>
-          <div className="absolute top-3 left-3 right-3 flex flex-col gap-2">
+          <div className="absolute top-4 left-4 right-4 flex flex-col gap-2.5">
             <div className="h-[3px] bg-gray-300 rounded-full opacity-60 w-full"></div>
             <div className="h-[3px] bg-gray-300 rounded-full opacity-60 w-3/4"></div>
             <div className="h-[3px] bg-gray-300 rounded-full opacity-60 w-5/6"></div>
@@ -86,7 +86,7 @@ const LatestCard = () => {
           <div className="absolute bottom-2 right-2 w-5 h-5 bg-gray-400 rounded-full opacity-40"></div>
         </div>
 
-        <div className="h-full flex-1 min-w-0 inline-flex flex-col justify-between">
+        <div className="flex-1 min-w-0 flex flex-col justify-between py-1">
           <p className="text-[13px] md:text-[15px] font-semibold md:font-medium text-[#1e293b] leading-snug transition-colors duration-500 line-clamp-2">
             {currentData.title}
           </p>
