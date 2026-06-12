@@ -19,18 +19,18 @@ const TopBar = ({ onMenuClick }: TopBarProps) => (
       </button>
     </div>
 
-    <div className="flex items-center gap-4">
-      <div className="flex items-center bg-[#eff5f1] rounded-xl pl-3 pr-1 py-1 border border-[#e5eee8]">
-        <div className="flex items-center gap-2 text-[#458564] ml-1 mr-3">
-          <Coins size={22} strokeWidth={1.5} />
-          <span className="text-[14px] tracking-wide">450000/5500000</span>
+    <div className="flex items-center gap-2 md:gap-4">
+      <div className="flex items-center bg-[#eff5f1] rounded-[8px] md:rounded-xl pl-2 md:pl-3 pr-1 py-1 border border-[#e5eee8]">
+        <div className="flex items-center gap-1.5 md:gap-2 text-[#458564] ml-1 mr-2 md:mr-3">
+          <Coins className="w-[16px] h-[16px] md:w-[22px] md:h-[22px]" strokeWidth={1.5} />
+          <span className="text-[11px] md:text-[14px] tracking-wide truncate max-w-[80px] md:max-w-none">450000/5500000</span>
         </div>
-        <button className="text-[13px] font-medium text-white bg-[#458564] rounded-xl px-4 py-1.5 transition-colors hover:bg-[#387053]">
+        <button className="text-[10px] md:text-[13px] font-medium text-white bg-[#458564] rounded-[6px] md:rounded-xl px-2.5 md:px-4 py-1 md:py-1.5 transition-colors hover:bg-[#387053] whitespace-nowrap">
           Booster Plan
         </button>
       </div>
 
-      <div className="w-[36px] h-[36px] rounded-full overflow-hidden cursor-pointer flex-shrink-0 relative">
+      <div className="w-[30px] h-[30px] md:w-[36px] md:h-[36px] rounded-full overflow-hidden cursor-pointer flex-shrink-0 relative">
         <img 
           src="https://i.pravatar.cc/150?img=11" 
           alt="User Avatar" 
