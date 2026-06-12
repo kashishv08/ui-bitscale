@@ -43,7 +43,7 @@ const ProductDemoCard = () => {
       <div className="flex items-center gap-3.5 mb-5">
         <DemoIconSvgExact />
         <div className="flex-1 min-w-0">
-          <p className="text-[16px] font-medium text-[#1e293b] leading-tight mb-1">
+          <p className="text-[14px] font-medium text-[#1e293b] leading-tight mb-1">
             Complete product demo
           </p>
           <p className="text-[13px] text-[#475569]">

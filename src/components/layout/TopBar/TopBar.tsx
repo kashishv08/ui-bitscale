@@ -23,7 +23,7 @@ const TopBar = ({ onMenuClick }: TopBarProps) => (
       <div className="flex items-center bg-[#eff5f1] rounded-xl pl-3 pr-1 py-1 border border-[#e5eee8]">
         <div className="flex items-center gap-2 text-[#458564] ml-1 mr-3">
           <Coins size={22} strokeWidth={1.5} />
-          <span className="text-[14px] font-medium tracking-wide">450000/5500000</span>
+          <span className="text-[14px] tracking-wide">450000/5500000</span>
         </div>
         <button className="text-[13px] font-medium text-white bg-[#458564] rounded-xl px-4 py-1.5 transition-colors hover:bg-[#387053]">
           Booster Plan

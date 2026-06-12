@@ -6,9 +6,9 @@ import { TABLE_COLS } from './GridsTable';
 const StarIcon = ({ filled }: { filled: boolean }) => (
   <Star
     size={15}
-    fill={filled ? '#f59e0b' : 'none'}
+    fill="none"
     color={filled ? '#f59e0b' : '#9ca3af'}
-    strokeWidth={1.8}
+    strokeWidth={filled ? 2.5 : 1.8}
   />
 );
 

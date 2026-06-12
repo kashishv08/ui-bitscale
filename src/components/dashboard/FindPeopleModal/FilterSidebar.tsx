@@ -1,7 +1,7 @@
-import { Search, ChevronDown, Bookmark, Eye, X, UserSearch } from "lucide-react";
+import { ChevronDown, Eye, FileSearchCorner, Search, UserSearch, X } from "lucide-react";
+import type { FilterSidebarProps } from "../../../types";
 import FilterIcon from "./FilterIcon";
 import { FILTERS } from "./constants";
-import type { FilterSidebarProps } from "../../../types";
 
 const FilterSidebar = ({
   keyword,
@@ -13,32 +13,32 @@ const FilterSidebar = ({
   <div className="flex flex-col h-full">
     <div
       style={{
-        padding: "16px 20px 12px 20px",
-        borderBottom: "1px solid #e5e7eb",
+        padding: "24px 20px 24px 20px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
         flexShrink: 0,
+        gap: 20
       }}
     >
-      <span style={{ fontSize: 16, fontWeight: 700, color: "#111827" }}>Find People</span>
+      <span style={{ fontSize: 15, fontWeight: 700, color: "#0f172a" }}>Find People</span>
       <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
         <button
           style={{
             display: "flex",
             alignItems: "center",
-            gap: 4,
-            fontSize: 12,
-            color: "#374151",
-            background: "#f9fafb",
-            border: "1px solid #e5e7eb",
+            gap: 6,
+            fontSize: 10,
+            color: "#334155",
+            background: "#f1f5f9",
+            border: "none",
             borderRadius: 6,
-            padding: "4px 10px",
+            padding: "2px 5px",
             cursor: "pointer",
             fontWeight: 500,
           }}
         >
-          <ChevronDown size={12} />
+          <ChevronDown size={14} strokeWidth={2.5} />
           Saved Search
         </button>
         <button
@@ -52,14 +52,14 @@ const FilterSidebar = ({
       </div>
     </div>
 
-    <div style={{ flex: 1, overflowY: "auto", padding: "12px 0" }}>
-      <div style={{ padding: "0 20px 12px 20px" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 8 }}>
-          <UserSearch size={15} color="#6b7280" strokeWidth={1.5} />
-          <span style={{ fontSize: 13, fontWeight: 600, color: "#111827" }}>People Keyword</span>
+    <div className="no-scrollbar" style={{ flex: 1, overflowY: "auto", padding: "2px 0" }}>
+      <div style={{ padding: "2px 20px 10px 20px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 5 }}>
+          <UserSearch size={18} color="#0f172a" strokeWidth={2} />
+          <span style={{ fontSize: 12, fontWeight: 600, color: "#0f172a" }}>People Keyword</span>
         </div>
         <div style={{ position: "relative" }}>
-          <Search size={13} style={{ position: "absolute", left: 8, top: "50%", transform: "translateY(-50%)", color: "#9ca3af" }} />
+          <Search size={14} style={{ position: "absolute", left: 0, top: "50%", transform: "translateY(-50%)", color: "#94a3b8" }} />
           <input
             type="text"
             placeholder="Enter single keyword here..."
@@ -67,25 +67,27 @@ const FilterSidebar = ({
             onChange={e => onKeywordChange(e.target.value)}
             style={{
               width: "100%",
-              paddingLeft: 28,
+              paddingLeft: 24,
               paddingRight: 8,
-              paddingTop: 7,
-              paddingBottom: 7,
-              fontSize: 12,
-              border: "1px solid #e5e7eb",
-              borderRadius: 6,
-              color: "#374151",
+              paddingTop: 8,
+              paddingBottom: 8,
+              fontSize: 14,
+              border: "none",
+              borderBottom: "2px solid #e2e8f0",
+              borderRadius: 0,
+              color: "#334155",
               outline: "none",
               boxSizing: "border-box",
+              background: "transparent",
             }}
           />
         </div>
       </div>
 
-      <div style={{ height: 1, background: "#f3f4f6", margin: "0 0 4px 0" }} />
+      <div style={{ height: 1, background: "#e2e8f0", margin: "0 20px 8px 20px" }} />
 
       {FILTERS.map((filter) => (
-        <div key={filter.label} style={{ borderBottom: "1px solid #f3f4f6" }}>
+        <div key={filter.label}>
           <button
             onClick={() => onToggleFilter(filter.label)}
             style={{
@@ -100,12 +102,12 @@ const FilterSidebar = ({
               textAlign: "left",
             }}
           >
-            <div style={{ display: "flex", alignItems: "flex-start", flexDirection: "column", gap: 1 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                <FilterIcon type={filter.label} />
-                <span style={{ fontSize: 13, fontWeight: 600, color: "#111827" }}>{filter.label}</span>
+            <div style={{ display: "flex", alignItems: "flex-start", flexDirection: "column", gap: 6 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <FilterIcon type={filter.label} style={{ fontSize: 12, fontWeight: 600, color: "#0f172a" }} />
+                <span style={{ fontSize: 12, fontWeight: 600, color: "#0f172a" }}>{filter.label}</span>
               </div>
-              <span style={{ fontSize: 11, color: "#9ca3af", paddingLeft: 22 }}>{filter.placeholder}</span>
+              <span style={{ fontSize: 10, color: "#64748b" }}>{filter.placeholder}</span>
             </div>
             <ChevronDown
               size={14}
@@ -114,6 +116,8 @@ const FilterSidebar = ({
                 transform: openFilters[filter.label] ? "rotate(180deg)" : "rotate(0deg)",
                 transition: "transform 0.2s",
                 flexShrink: 0,
+                fontSize: 12, 
+                fontWeight: 600
               }}
             />
           </button>
@@ -124,27 +128,27 @@ const FilterSidebar = ({
                 placeholder={filter.placeholder}
                 style={{
                   width: "100%",
-                  padding: "7px 10px",
-                  fontSize: 12,
+                  padding: "9px 12px",
+                  fontSize: 13,
                   border: "1px solid #e5e7eb",
                   borderRadius: 6,
-                  color: "#374151",
+                  color: "#334155",
                   outline: "none",
                   boxSizing: "border-box",
                 }}
               />
             </div>
           )}
+          <div style={{ margin: "0 20px", height: 1, backgroundColor: "#e2e8f0" }} />
         </div>
       ))}
     </div>
 
     <div
       style={{
-        padding: "12px 16px",
-        borderTop: "1px solid #e5e7eb",
+        padding: "30px 20px",
         display: "flex",
-        gap: 8,
+        gap: 12,
         flexShrink: 0,
       }}
     >
@@ -155,37 +159,40 @@ const FilterSidebar = ({
           alignItems: "center",
           justifyContent: "center",
           gap: 6,
-          padding: "9px 0",
-          fontSize: 13,
-          fontWeight: 500,
-          color: "#374151",
-          background: "#fff",
-          border: "1px solid #d1d5db",
-          borderRadius: 8,
+          paddingRight: 5,
+          paddingLeft: 5,
+          padding: "10px 0",
+          fontSize: 10,
+          fontWeight: 600,
+          color: "#1e293b",
+          background: "#e2e8f0",
+          border: "none",
+          borderRadius: 6,
           cursor: "pointer",
         }}
       >
-        <Bookmark size={14} />
+        <FileSearchCorner size={16} />
         Save Search
       </button>
       <button
         style={{
-          flex: 1.4,
+          flex: 1.5,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          gap: 6,
-          padding: "9px 0",
-          fontSize: 13,
+          gap: 8,
+          paddingRight: 10,
+          paddingLeft: 10,
+          fontSize: 10,
           fontWeight: 600,
           color: "#fff",
-          background: "#111827",
+          background: "#1e293b",
           border: "none",
-          borderRadius: 8,
+          borderRadius: 6,
           cursor: "pointer",
         }}
       >
-        <Eye size={14} />
+        <Eye size={16} strokeWidth={2.5} />
         Preview Result
       </button>
     </div>

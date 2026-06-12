@@ -50,9 +50,9 @@ export const LockIcon = () => <Lock size={12} strokeWidth={2} />;
 
 export const MenuIcon = () => <Menu size={24} strokeWidth={2} />;
 
-export const BuildingIcon = () => <Building2 size={18} strokeWidth={2.2} />;
+export const BuildingIcon = () => <Building2 size={11} strokeWidth={2.2} />;
 
-export const PeopleIcon = () => <User size={18} strokeWidth={2.2} />;
+export const PeopleIcon = () => <User size={11} strokeWidth={2.2} />;
 
 export const PlusIcon = () => <Plus size={14} strokeWidth={2.5} />;
 
@@ -69,7 +69,7 @@ export const StarIcon = ({ filled = false }: { filled?: boolean }) => (
     size={14}
     strokeWidth={2}
     color={filled ? '#f59e0b' : '#9ca3af'}
-    fill={filled ? '#f59e0b' : 'none'}
+    fill="none"
   />
 );
 

@@ -20,7 +20,7 @@ const FindPeopleModal = ({ onClose }: FindPeopleModalProps) => {
       role="dialog"
       aria-label="Find People"
     >
-      <div className="w-[95vw] md:w-[1050px] h-[85vh] md:h-[600px] max-h-[90vh] bg-white rounded-xl shadow-2xl flex overflow-hidden relative">
+      <div className="w-[90vw] md:w-[900px] h-[85vh] md:h-[600px] max-h-[90vh] bg-white rounded-xl shadow-2xl flex overflow-hidden relative">
 
         {isMobileFiltersOpen && (
           <div
@@ -30,7 +30,7 @@ const FindPeopleModal = ({ onClose }: FindPeopleModalProps) => {
         )}
 
         <div
-          className={`absolute md:relative z-10 bg-white flex flex-col flex-shrink-0 border-r border-gray-200 overflow-y-auto h-full transition-transform transform
+          className={`absolute md:relative z-10 bg-white flex flex-col flex-shrink-0 overflow-y-auto h-full transition-transform transform
             ${isMobileFiltersOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
           style={{ width: 280 }}
         >

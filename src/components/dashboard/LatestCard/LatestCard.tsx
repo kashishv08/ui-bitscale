@@ -45,12 +45,12 @@ const LatestCard = () => {
 
   return (
     <div 
-      className="rounded-[16px] overflow-hidden transition-colors duration-500 ease-in-out  pb-0 p-5 shadow-sm"
+      className="rounded-[16px] overflow-hidden transition-colors duration-500 ease-in-out  pb-0 p-5 shadow-sm mb-0"
       style={{ backgroundColor: currentData.theme.bg }}
     >
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-4 md:mb-5">
         <span 
-          className="text-[15px] font-medium transition-colors duration-500"
+          className="text-[13px] md:text-[15px] font-medium transition-colors duration-500"
           style={{ color: currentData.theme.accent }}
         >
           Latest from Bitscale
@@ -62,7 +62,7 @@ const LatestCard = () => {
               key={i}
               onClick={() => setActiveIndex(i)}
               className={`rounded-full transition-all duration-500 cursor-pointer hover:opacity-80 ${
-                i === activeIndex ? 'w-[18px] h-[6px]' : 'w-[6px] h-[6px]'
+                i === activeIndex ? 'w-[14px] h-[5px] md:w-[18px] md:h-[6px]' : 'w-[5px] h-[5px] md:w-[6px] md:h-[6px]'
               }`}
               style={{
                 backgroundColor: i === activeIndex ? currentData.theme.accent : currentData.theme.dotInactive
@@ -73,8 +73,8 @@ const LatestCard = () => {
         </div>
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-4 mb-5">
-        <div className="flex-shrink-0 w-full sm:w-[150px] h-[140px] sm:h-[110px] bg-white rounded-[8px] relative flex items-center justify-center overflow-hidden border border-black/5 shadow-sm">
+      <div className="flex flex-col md:flex-row gap-4 mb-1 md:mb-2">
+        <div className="h-full flex-shrink-0 w-full md:w-[160px] h-[160px] md:h-[110px] bg-white rounded-[8px] relative flex items-center justify-center overflow-hidden border border-black/5 shadow-sm">
           <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200"></div>
           <div className="absolute top-3 left-3 right-3 flex flex-col gap-2">
             <div className="h-[3px] bg-gray-300 rounded-full opacity-60 w-full"></div>
@@ -86,14 +86,14 @@ const LatestCard = () => {
           <div className="absolute bottom-2 right-2 w-5 h-5 bg-gray-400 rounded-full opacity-40"></div>
         </div>
 
-        <div className="flex-1 min-w-0 flex flex-col justify-center">
-          <p className="text-[15px] font-medium text-[#1e293b] leading-snug transition-colors duration-500 line-clamp-2">
+        <div className="h-full flex-1 min-w-0 inline-flex flex-col justify-between">
+          <p className="text-[13px] md:text-[15px] font-semibold md:font-medium text-[#1e293b] leading-snug transition-colors duration-500 line-clamp-2">
             {currentData.title}
           </p>
-          <p className="text-[13px] text-[#64748b] mt-1.5 leading-[1.45] line-clamp-3 transition-colors duration-500">
+          <p className="text-[11px] md:text-[13px] text-[#64748b] mt-1 md:mt-1.5 leading-[1.45] line-clamp-3 transition-colors duration-500">
             {currentData.description}
           </p>
-          <p className="text-[12px] text-[#94a3b8] mt-2">Posted today</p>
+          <p className="text-[10px] md:text-[12px] text-[#94a3b8] mt-2">Posted today</p>
         </div>
       </div>
     </div>

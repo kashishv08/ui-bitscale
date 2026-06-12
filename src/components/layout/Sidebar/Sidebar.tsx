@@ -50,7 +50,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
         style={{ width: '232px' }}
         aria-label="Application sidebar"
       >
-        <div className="px-5 pt-6 pb-5">
+        <div className="px-5 pt-6 pb-2.5">
           <img src="/image.png" alt="bitscale" className="h-[22px]" />
         </div>
 
@@ -61,7 +61,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
           >
             <div className="flex items-center gap-3">
               <OverlappingAvatars />
-              <span className="text-[17px] font-medium text-[#1f2937]">
+              <span className="text-[15px] font-semibold text-[#1f2937]">
                 GTM Spaces
               </span>
             </div>

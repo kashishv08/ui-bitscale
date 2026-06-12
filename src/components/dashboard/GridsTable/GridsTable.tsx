@@ -44,27 +44,30 @@ const GridsTable = () => {
   return (
     <div className="px-4 md:px-6 pb-4">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-3 gap-3">
-        <div className="flex items-center gap-0">
+        <div className="flex items-center gap-8 border-b border-gray-200 px-1">
           {(['grids', 'starred'] as GridTab[]).map(tab => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`text-sm font-medium pb-2.5 px-1 mr-6 transition-colors whitespace-nowrap ${
+              className={`text-[14px]  p-5 relative transition-colors whitespace-nowrap ${
                 activeTab === tab
-                  ? 'text-blue-600 border-b-2 border-blue-600'
-                  : 'text-gray-400 border-b-2 border-transparent hover:text-gray-600'
+                  ? 'text-[#2563eb]'
+                  : 'text-[#6b7280] hover:text-gray-900'
               }`}
               role="tab"
               aria-selected={activeTab === tab}
             >
               {tab === 'grids' ? 'My Grids' : 'Starred'}
+              {activeTab === tab && (
+                <div className="absolute bottom-[-1.5px] left-0 w-full h-[1.5px] bg-[#2563eb] " />
+              )}
             </button>
           ))}
         </div>
 
         <div className="flex items-center gap-2">
           <div
-            className="flex items-center gap-2 rounded-[8px] px-3 py-2 bg-[#f4f5f8] transition-colors"
+            className="flex items-center gap-5 rounded-[8px] px-3 py-2 bg-[#f4f5f8] transition-colors"
             style={{ minWidth: 260 }}
           >
             <SearchIcon />
