@@ -51,7 +51,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
         aria-label="Application sidebar"
       >
         <div className="px-5 pt-6 pb-5">
-          <img src="public\image.png" alt="bitscale" className="h-[22px]" />
+          <img src="/image.png" alt="bitscale" className="h-[22px]" />
         </div>
 
         <div className="border-t border-b border-gray-100">
@@ -107,7 +107,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
           <button className="w-full flex items-center justify-between bg-[#f4f5f8] hover:bg-[#e9ebf0] rounded-[8px] px-4 py-3.5 transition-colors">
             <div className="flex flex-col text-left">
               <div className="flex items-center">
-                <img src="public\image.png" alt="bitscale" className="h-3.5 opacity-90" style={{ filter: 'brightness(0.2)' }} />
+                <img src="/image.png" alt="bitscale" className="h-3.5 opacity-90" style={{ filter: 'brightness(0.2)' }} />
               </div>
               <div className="text-[12px] text-[#4b5563] mt-1 font-medium">
                 Get Support at Bitscale

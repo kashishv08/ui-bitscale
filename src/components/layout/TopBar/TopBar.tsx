@@ -32,7 +32,7 @@ const TopBar = ({ onMenuClick }: TopBarProps) => (
 
       <div className="w-[36px] h-[36px] rounded-full overflow-hidden cursor-pointer flex-shrink-0 relative">
         <img 
-          src="https://picsum.photos/seed/avatar3/100/100" 
+          src="https://i.pravatar.cc/150?img=11" 
           alt="User Avatar" 
           className="w-full h-full object-cover"
           onError={(e) => {
