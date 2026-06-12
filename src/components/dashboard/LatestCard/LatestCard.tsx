@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const CAROUSEL_DATA = [
   {
@@ -31,7 +31,7 @@ const PlayIconCircle = () => (
   </div>
 );
 
-const LatestCard: React.FC = () => {
+const LatestCard = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {

@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import NavItem from './NavItem';
+import { ChevronsUpDown, ChevronUp, Rocket } from 'lucide-react';
+import { useState } from 'react';
 import {
-  DashboardIcon,
-  PlaybooksIcon,
-  IntegrationsIcon,
-  DocsIcon,
-  SettingsIcon,
   ChevronRightIcon,
+  DashboardIcon,
+  DocsIcon,
+  IntegrationsIcon,
+  PlaybooksIcon,
+  SettingsIcon,
 } from '../../../icons';
-import { Rocket, ChevronsUpDown, ChevronUp } from 'lucide-react';
 import type { SidebarProps } from '../../../types';
+import NavItem from './NavItem';
 
 const OverlappingAvatars = () => (
   <div className="flex items-center -space-x-3.5">
@@ -34,7 +34,7 @@ const RocketPill = () => (
   </div>
 );
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
   const [isNavExpanded, setIsNavExpanded] = useState(true);
 
   return (

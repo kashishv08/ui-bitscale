@@ -1,7 +1,6 @@
-import React from 'react';
 import type { NavItemProps } from '../../../types';
 
-const NavItem: React.FC<NavItemProps> = ({ icon, label, active = false, suffix, onClick }) => (
+const NavItem = ({ icon, label, active = false, suffix, onClick }: NavItemProps) => (
   <button
     onClick={onClick}
     className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-[8px] text-[14px] transition-colors mb-0.5 ${

@@ -1,7 +1,7 @@
-import { TABLE_COLS } from './GridsTable';
+import { Building2, ChevronDown, MoreHorizontal, Share2, Star, Users } from 'lucide-react';
 import { AVATAR_FALLBACK_COLOR } from '../../../constants/avatarColors';
-import type { GridRowData, GridRowProps } from '../../../types';
-import { Star, ChevronDown, MoreHorizontal, Users, Share2, Building2 } from 'lucide-react';
+import type { GridRowProps } from '../../../types';
+import { TABLE_COLS } from './GridsTable';
 
 const StarIcon = ({ filled }: { filled: boolean }) => (
   <Star

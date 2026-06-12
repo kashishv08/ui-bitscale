@@ -1,13 +1,12 @@
-import React from 'react';
 import { BuildingIcon, PeopleIcon, PlusIcon } from '../../../icons';
 import type { WelcomeHeaderProps } from '../../../types';
 
-const WelcomeHeader: React.FC<WelcomeHeaderProps> = ({
+const WelcomeHeader = ({
   userName = 'Tim',
   onFindPeopleClick,
   onFindCompaniesClick,
   onNewGridClick,
-}) => (
+}: WelcomeHeaderProps) => (
   <div className="flex flex-col md:flex-row items-start md:items-center justify-between px-4 md:px-6 pt-5 pb-4 gap-4">
     {}
     <div>

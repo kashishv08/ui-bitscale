@@ -1,10 +1,9 @@
-import React from 'react';
-import Avatar from '../../ui/Avatar/Avatar';
-import { MenuIcon } from '../../../icons';
 import { Coins } from 'lucide-react';
+import { MenuIcon } from '../../../icons';
 import type { TopBarProps } from '../../../types';
+import Avatar from '../../ui/Avatar/Avatar';
 
-const TopBar: React.FC<TopBarProps> = ({ onMenuClick }) => (
+const TopBar = ({ onMenuClick }: TopBarProps) => (
   <header
     className="flex items-center justify-between md:justify-end px-4 md:px-6 py-2 border-b border-gray-100 flex-shrink-0"
     style={{ backgroundColor: '#ffffff' }}

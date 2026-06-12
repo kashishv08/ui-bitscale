@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import type { DemoChecklistItem } from '../../../types';
 
 const INITIAL_CHECKLIST: DemoChecklistItem[] = [
@@ -8,7 +8,7 @@ const INITIAL_CHECKLIST: DemoChecklistItem[] = [
   { label: 'Customise waterfall providers',done: false },
 ];
 
-import { FileCheck, Check } from 'lucide-react';
+import { Check, FileCheck } from 'lucide-react';
 
 const DemoIconSvgExact = () => (
   <div className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 bg-[#4b5563]">
@@ -26,7 +26,7 @@ const CustomCheckCircleIcon = ({ checked }: { checked: boolean }) => (
   )
 );
 
-const ProductDemoCard: React.FC = () => {
+const ProductDemoCard = () => {
   const [checklist, setChecklist] = useState<DemoChecklistItem[]>(INITIAL_CHECKLIST);
 
   const toggleItem = (index: number) => {

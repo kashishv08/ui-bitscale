@@ -1,16 +1,16 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-import Sidebar    from './layout/Sidebar/Sidebar';
-import TopBar     from './layout/TopBar/TopBar';
+import Sidebar from './layout/Sidebar/Sidebar';
+import TopBar from './layout/TopBar/TopBar';
 
-import WelcomeHeader    from './dashboard/WelcomeHeader/WelcomeHeader';
-import LatestCard       from './dashboard/LatestCard/LatestCard';
-import ProductDemoCard  from './dashboard/ProductDemoCard/ProductDemoCard';
-import GridsTable       from './dashboard/GridsTable/GridsTable';
-import FindPeopleModal  from './dashboard/FindPeopleModal/FindPeopleModal';
+import FindPeopleModal from './dashboard/FindPeopleModal/FindPeopleModal';
+import GridsTable from './dashboard/GridsTable/GridsTable';
+import LatestCard from './dashboard/LatestCard/LatestCard';
+import ProductDemoCard from './dashboard/ProductDemoCard/ProductDemoCard';
+import WelcomeHeader from './dashboard/WelcomeHeader/WelcomeHeader';
 
-const DashboardPage: React.FC = () => {
+const DashboardPage = () => {
 
   const [isFindPeopleOpen, setFindPeopleOpen] = useState(false);
   const [isSidebarOpen, setSidebarOpen] = useState(false);

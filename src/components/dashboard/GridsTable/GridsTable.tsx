@@ -1,5 +1,5 @@
 import { ArrowUpIcon } from 'lucide-react';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { GRIDS_DATA } from '../../../data/grids';
 import { ListIcon, SearchIcon } from '../../../icons';
 import type { GridTab } from '../../../types';
@@ -7,7 +7,7 @@ import GridRow from './GridRow';
 
 export const TABLE_COLS = '36px 42px 48px 1fr 220px 150px 60px';
 
-const GridsTable: React.FC = () => {
+const GridsTable = () => {
   const [activeTab, setActiveTab] = useState<GridTab>('grids');
   const [searchQuery, setSearchQuery] = useState('');
   const [starredIds, setStarredIds] = useState<Set<number>>(

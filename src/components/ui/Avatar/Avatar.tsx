@@ -1,5 +1,4 @@
-import React from 'react';
-import type { AvatarSize, AvatarProps } from '../../../types';
+import type { AvatarProps, AvatarSize } from '../../../types';
 
 const SIZE_CLASSES: Record<AvatarSize, string> = {
   sm: 'w-5 h-5 text-[9px]',
@@ -7,7 +6,7 @@ const SIZE_CLASSES: Record<AvatarSize, string> = {
   lg: 'w-8 h-8 text-xs',
 };
 
-const Avatar: React.FC<AvatarProps> = ({ initials, color, size = 'md' }) => (
+const Avatar = ({ initials, color, size = 'md' }: AvatarProps) => (
   <div
     className={`${SIZE_CLASSES[size]} rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0`}
     style={{ background: color }}
