@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import FilterSidebar from "./FilterSidebar";
 import ResultsPanel from "./ResultsPanel";
 import type { FindPeopleModalProps } from "../../../types";
@@ -7,6 +7,13 @@ const FindPeopleModal = ({ onClose }: FindPeopleModalProps) => {
   const [keyword, setKeyword] = useState("");
   const [openFilters, setOpenFilters] = useState<Record<string, boolean>>({});
   const [isMobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+
+    useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
 
   const toggleFilter = (label: string) =>
     setOpenFilters(prev => ({ ...prev, [label]: !prev[label] }));
