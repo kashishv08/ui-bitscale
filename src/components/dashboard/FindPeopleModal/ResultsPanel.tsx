@@ -8,8 +8,8 @@ const EmptyIllustration = () => (
   </div>
 );
 
-const ResultsPanel = ({ onClose, onMobileFiltersOpen }: ResultsPanelProps) => (
-  <div className="flex-1 flex flex-col overflow-hidden">
+const ResultsPanel = ({ onClose, onMobileFiltersOpen, isMobileFiltersOpen }: ResultsPanelProps) => (
+  <div className={`flex-1 flex flex-col overflow-hidden ${isMobileFiltersOpen ? 'opacity-[0.37]': ''}`}>
     <div className="relative px-4 md:pl-0 md:pr-6 shrink-0 flex flex-col justify-end min-h-[71px] pb-3">
       <button
         className="md:hidden absolute top-4 left-3 p-1 text-gray-600 hover:text-gray-900"
@@ -21,6 +21,7 @@ const ResultsPanel = ({ onClose, onMobileFiltersOpen }: ResultsPanelProps) => (
 
       <div>
         <button
+        disabled={isMobileFiltersOpen}
           onClick={onClose}
           className="p-0 absolute top-2 right-2 md:top-1 md:right-2 w-[12px] h-[12px] md:w-[15px] md:h-[15px] bg-[#f1f5f9] rounded-full flex items-center justify-center text-[#475569] hover:bg-slate-200 transition-colors"
           aria-label="Close modal"
@@ -54,7 +55,7 @@ const ResultsPanel = ({ onClose, onMobileFiltersOpen }: ResultsPanelProps) => (
       <div className="no-scrollbar flex-1 flex flex-col border border-[#e2e8f0] rounded-xl bg-white shadow-sm overflow-y-auto overflow-x-auto">
         <div className="min-w-[700px] flex-1 flex flex-col">
           {/* Table Header */}
-          <div className="flex bg-[#f8fafc] border-b border-[#e2e8f0] px-4 py-3.5 flex-shrink-0 sticky top-0 z-10">
+          <div className="flex bg-[#f8fafc] border-b border-[#e2e8f0] px-4 py-3.5 flex-shrink-0 sticky top-0 z-1">
             {TABLE_COLUMNS.map((col) => (
               <div
                 key={col}

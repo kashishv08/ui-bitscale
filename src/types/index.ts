@@ -69,6 +69,7 @@ export interface WelcomeHeaderProps {
 export interface ResultsPanelProps {
   onClose: () => void;
   onMobileFiltersOpen: () => void;
+  isMobileFiltersOpen: boolean;
 }
 
 export interface FilterSidebarProps {

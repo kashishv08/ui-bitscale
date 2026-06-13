@@ -24,7 +24,7 @@ const FindPeopleModal = ({ onClose }: FindPeopleModalProps) => {
 
         {isMobileFiltersOpen && (
           <div
-            className="absolute inset-0 bg-black bg-opacity-40 z-0 md:hidden"
+            className="absolute inset-0 bg-black bg-opacity-30 md:hidden"
             onClick={() => setMobileFiltersOpen(false)}
           />
         )}
@@ -46,6 +46,7 @@ const FindPeopleModal = ({ onClose }: FindPeopleModalProps) => {
         <ResultsPanel
           onClose={onClose}
           onMobileFiltersOpen={() => setMobileFiltersOpen(true)}
+          isMobileFiltersOpen={isMobileFiltersOpen}
         />
       </div>
     </div>
